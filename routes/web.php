@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'Admin\UsersController@index'); //for namespace, use backslash
+Route::get('/', 'Admin\UsersController@index')->middleware('auth'); //for namespace, use backslash
+
+Auth::routes();
+
+
